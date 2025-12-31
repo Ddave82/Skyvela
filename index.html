@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SKYVELA Charter - Premium private jet charter across Europe with same-day availability and concierge-level service.">
+    <title>SKYVELA Charter — Private Aviation, Refined.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <span class="top-bar-left">24/7 Charter Desk</span>
+                <div class="top-bar-right">
+                    <a href="tel:+442012345678" class="top-bar-link">+44 20 1234 5678</a>
+                    <span class="top-bar-divider">|</span>
+                    <a href="mailto:charter@skyvela.com" class="top-bar-link">charter@skyvela.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="#" class="navbar-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">SKYVELA</a>
+
+                <ul class="navbar-menu" id="navbarMenu">
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close navigation menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <li><a href="#fleet" class="navbar-link">Fleet</a></li>
+                    <li><a href="#how-it-works" class="navbar-link">How it Works</a></li>
+                    <li><a href="#destinations" class="navbar-link">Destinations</a></li>
+                    <li><a href="#service" class="navbar-link">Service</a></li>
+                    <li><a href="#safety" class="navbar-link">Safety</a></li>
+                    <li><a href="#faq" class="navbar-link">FAQ</a></li>
+                    <li><a href="#contact" class="navbar-link">Contact</a></li>
+                </ul>
+
+                <button class="btn btn-primary navbar-cta" onclick="scrollToContact()">Request a Quote</button>
+
+                <button class="navbar-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="hero-headline animate-on-load">Learjet Charter — Fast. Private. Effortless.</h1>
+                    <p class="hero-subline animate-on-load">Premium private jet charter across Europe with same-day availability and concierge-level service.</p>
+                    <div class="hero-cta-group animate-on-load">
+                        <button class="btn btn-primary btn-large" onclick="scrollToContact()">Request a Quote</button>
+                        <button class="btn btn-secondary btn-large" onclick="document.getElementById('fleet').scrollIntoView({behavior: 'smooth'})">View Fleet</button>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-card animate-on-load">
+                        <h3 class="hero-card-title">Get Your Quote</h3>
+                        <form class="quote-form" id="heroQuoteForm">
+                            <div class="form-group">
+                                <label for="hero-from">From</label>
+                                <input type="text" id="hero-from" name="from" placeholder="London" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hero-to">To</label>
+                                <input type="text" id="hero-to" name="to" placeholder="Paris" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hero-date">Date</label>
+                                <input type="date" id="hero-date" name="date" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="hero-passengers">Passengers</label>
+                                    <select id="hero-passengers" name="passengers" required>
+                                        <option value="">Select</option>
+                                        <option value="1-2">1-2</option>
+                                        <option value="3-4">3-4</option>
+                                        <option value="5-6">5-6</option>
+                                        <option value="7-8">7-8</option>
+                                        <option value="9+">9+</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hero-aircraft">Aircraft Class</label>
+                                    <select id="hero-aircraft" name="aircraft" required>
+                                        <option value="">Select</option>
+                                        <option value="light">Light</option>
+                                        <option value="mid">Mid</option>
+                                        <option value="heavy">Heavy</option>
+                                        <option value="notsure">Not sure</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-large btn-block">Get My Quote</button>
+                        </form>
+                        <p class="trust-note">Typical response time: under 30 minutes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span class="trust-badge-text">Light · Mid · Heavy Jets</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-text">EU-wide Charter</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-text">Dedicated Flight Concierge</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLEET SECTION -->
+    <section class="section section-gradient" id="fleet">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Fleet Selection</h2>
+                <p class="section-subtitle">From nimble light jets to spacious heavy aircraft — curated options for every route and requirement.</p>
+            </div>
+
+            <div class="fleet-grid">
+                <!-- Light Jet Card -->
+                <div class="fleet-card">
+                    <div class="fleet-card-image">
+                        <img src="images/image_5.png" alt="Light Jet in flight" onerror="this.parentElement.classList.add('image-placeholder')">
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3 class="fleet-card-title">Light Jet Class</h3>
+                        <p class="fleet-card-description">Ideal for short-haul European routes, executive meetings, and quick regional trips with speed and efficiency.</p>
+                        <div class="fleet-specs">
+                            <span class="spec-chip">Typical: 6-8 passengers</span>
+                            <span class="spec-chip">Typical: 2-3 hour range</span>
+                            <span class="spec-chip">Typical: 1,400 nm</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openFleetModal('light')">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Cabin Comfort Card - FEATURED -->
+                <div class="fleet-card fleet-card-featured">
+                    <div class="fleet-card-image">
+                        <img src="images/image_2.png" alt="Cabin interior" onerror="this.parentElement.classList.add('image-placeholder')">
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3 class="fleet-card-title">Cabin Comfort</h3>
+                        <p class="fleet-card-description">Premium interiors designed for productivity and relaxation, with refined finishes and modern amenities.</p>
+                        <div class="fleet-specs">
+                            <span class="spec-chip">Typical: Full WiFi</span>
+                            <span class="spec-chip">Typical: Full refreshment service</span>
+                            <span class="spec-chip">Typical: Power outlets</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openFleetModal('cabin')">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Jet Details Card -->
+                <div class="fleet-card">
+                    <div class="fleet-card-image">
+                        <img src="images/image_4.png" alt="Jet detail" onerror="this.parentElement.classList.add('image-placeholder')">
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3 class="fleet-card-title">Engineering Excellence</h3>
+                        <p class="fleet-card-description">Modern aircraft maintained to the highest standards, selected from trusted European operators.</p>
+                        <div class="fleet-specs">
+                            <span class="spec-chip">Typical: Current generation</span>
+                            <span class="spec-chip">Typical: Full maintenance logs</span>
+                            <span class="spec-chip">Typical: Advanced avionics</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openFleetModal('engineering')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">From first contact to wheels-up — a seamless, refined booking experience.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="steps-timeline"></div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">Request</h3>
+                        <p class="step-description">Share your route, dates, and preferences. We respond typically within 30 minutes with tailored aircraft options.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">Options</h3>
+                        <p class="step-description">Review transparent pricing, aircraft specifications, and operator details. Adjust your requirements as needed.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">Confirm</h3>
+                        <p class="step-description">Finalize your booking with clear documentation. Your dedicated concierge coordinates all details through departure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section class="section destinations-section" id="destinations">
+        <div class="container">
+            <div class="destinations-content">
+                <div class="destinations-image">
+                    <img src="images/image_6.png" alt="Coastal destination" onerror="this.classList.add('image-placeholder')">
+                </div>
+                <div class="destinations-text">
+                    <h2 class="section-title">Anywhere in Europe, On Your Schedule</h2>
+                    <p class="destinations-description">From major business hubs to exclusive leisure destinations — fly entirely on your schedule.</p>
+
+                    <div class="routes-list">
+                        <p class="routes-label">Example Routes:</p>
+                        <ul class="routes">
+                            <li class="route-item">
+                                <span class="route-arrow">→</span>
+                                <span class="route-text">London → Geneva</span>
+                            </li>
+                            <li class="route-item">
+                                <span class="route-arrow">→</span>
+                                <span class="route-text">Paris → Monaco</span>
+                            </li>
+                            <li class="route-item">
+                                <span class="route-arrow">→</span>
+                                <span class="route-text">Munich → Ibiza</span>
+                            </li>
+                            <li class="route-item">
+                                <span class="route-arrow">→</span>
+                                <span class="route-text">Zurich → St. Moritz</span>
+                            </li>
+                            <li class="route-item">
+                                <span class="route-arrow">→</span>
+                                <span class="route-text">Milan → Santorini</span>
+                            </li>
+                            <li class="route-item">
+                                <span class="route-arrow">→</span>
+                                <span class="route-text">Frankfurt → Nice</span>
+                            </li>
+                        </ul>
+                        <p class="routes-disclaimer">Routes shown are examples. We serve all EU airports and many private airfields.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM SERVICE -->
+    <section class="section section-image-overlay" id="service">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Service, Every Flight</h2>
+                <p class="section-subtitle">Tailored support that goes beyond the aircraft.</p>
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="12" fill="#EEF4FF"/>
+                            <path d="M20 12C16.6863 12 14 14.6863 14 18C14 21.3137 16.6863 24 20 24C23.3137 24 26 21.3137 26 18C26 14.6863 23.3137 12 20 12Z" stroke="#1E60FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 24V28M16 28H24" stroke="#1E60FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Concierge Flight Planning</h3>
+                    <p class="service-card-description">Your dedicated specialist handles routing, permits, and scheduling — adapting to last-minute changes with ease.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="12" fill="#EEF4FF"/>
+                            <path d="M20 14V20L24 22M28 20C28 24.4183 24.4183 28 20 28C15.5817 28 12 24.4183 12 20C12 15.5817 15.5817 12 20 12C24.4183 12 28 15.5817 28 20Z" stroke="#1E60FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Catering & Onboard Experience</h3>
+                    <p class="service-card-description">Customized menus from premium suppliers, paired with your beverage preferences and dietary requirements.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="12" fill="#EEF4FF"/>
+                            <path d="M12 18L14 16M14 16L20 10L26 16M14 16V28H18M28 18L26 16M26 16V28H22M22 28V22H18V28M22 28H26M18 28H14" stroke="#1E60FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Ground Transportation</h3>
+                    <p class="service-card-description">Coordinated arrivals and departures with vetted chauffeur services at both ends of your journey.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="12" fill="#EEF4FF"/>
+                            <path d="M12 20H28M20 12L20 28" stroke="#1E60FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Flexible Departure Windows</h3>
+                    <p class="service-card-description">Adjust your departure time as your plans evolve — we work with operators who understand executive schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY & CONFIDENCE -->
+    <section class="section section-gradient" id="safety">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Safety & Confidence</h2>
+                <p class="section-subtitle">Transparency and care in every detail.</p>
+            </div>
+
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <h3 class="safety-card-title">Carefully Selected Operator Options</h3>
+                    <p class="safety-card-description">We work exclusively with European operators who maintain rigorous safety standards and full regulatory compliance.</p>
+                </div>
+
+                <div class="safety-card">
+                    <h3 class="safety-card-title">Clear Trip Documentation</h3>
+                    <p class="safety-card-description">Receive complete flight details, aircraft registration, and operator information before every journey.</p>
+                </div>
+
+                <div class="safety-card">
+                    <h3 class="safety-card-title">Privacy-First Request Handling</h3>
+                    <p class="safety-card-description">Your travel plans and personal information are handled with discretion and stored securely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted by Decision-Makers</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The level of attention and responsiveness made our last-minute board meeting in Zurich entirely seamless. SKYVELA handled every detail."</p>
+                    <p class="testimonial-author">Founder, Technology Company</p>
+                </div>
+
+                <div class="testimonial-card testimonial-card-featured">
+                    <p class="testimonial-quote">"I coordinate complex travel for our executive team regularly. SKYVELA consistently delivers transparent pricing and flawless execution."</p>
+                    <p class="testimonial-author">Executive Assistant</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Discreet, efficient, and refreshingly straightforward. This is how private aviation should work."</p>
+                    <p class="testimonial-author">Private Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-gradient" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How quickly can you arrange a charter flight?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We typically respond to requests within 30 minutes with available options. For same-day departures, we can often confirm aircraft within 2-4 hours, subject to routing, aircraft availability, and crew rest requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What's included in the charter price?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All quotes include aircraft rental, crew, fuel, standard catering, and typical permits. Additional costs such as international handling fees, premium catering requests, or ground transportation are outlined separately and confirmed before booking.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I change my departure time after booking?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, within reason. We work with operators who accommodate schedule adjustments. Changes made close to departure are subject to crew availability and may incur repositioning costs, which we'll communicate clearly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do you offer empty leg flights?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. We monitor available empty leg opportunities across our operator network. These flights offer significant savings but require flexible departure times and dates. Contact us to join our empty leg notification list.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept bank transfers, corporate credit cards, and can establish account terms for regular clients. Payment is typically required 48-72 hours before departure, with detailed invoicing provided.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / QUOTE FORM -->
+    <section class="section section-contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-header">
+                    <h2 class="section-title">Request Your Charter Quote</h2>
+                    <p class="section-subtitle">Share your requirements and receive tailored options typically within 30 minutes.</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-from">From</label>
+                            <input type="text" id="contact-from" name="from" placeholder="Departure city or airport" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-to">To</label>
+                            <input type="text" id="contact-to" name="to" placeholder="Destination city or airport" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-date">Departure Date</label>
+                            <input type="date" id="contact-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-passengers">Passengers</label>
+                            <select id="contact-passengers" name="passengers" required>
+                                <option value="">Select number</option>
+                                <option value="1-2">1-2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="5-6">5-6</option>
+                                <option value="7-8">7-8</option>
+                                <option value="9+">9+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-aircraft">Aircraft Class</label>
+                        <select id="contact-aircraft" name="aircraft" required>
+                            <option value="">Select preference</option>
+                            <option value="light">Light</option>
+                            <option value="mid">Mid</option>
+                            <option value="heavy">Heavy</option>
+                            <option value="notsure">Not sure — recommend options</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="phone" placeholder="+44 20 1234 5678" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-notes">Additional Requirements (Optional)</label>
+                        <textarea id="contact-notes" name="notes" rows="4" placeholder="Special catering, ground transport, or other requests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent btn-large btn-block">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">SKYVELA</div>
+                    <p class="footer-tagline">Private aviation, refined.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#privacy" class="footer-link">Privacy Policy</a>
+                    <a href="#legal" class="footer-link">Legal Notice</a>
+                    <a href="#imprint" class="footer-link">Imprint</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 SKYVELA Charter. All rights reserved. | Concept Website by David John Godbehere</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLEET MODAL -->
+    <div class="modal" id="fleetModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-overlay" onclick="closeFleetModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeFleetModal()" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div id="modalBody">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- DEMO NOTICE MODAL -->
+    <div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-live="polite">
+        <div class="demo-modal-overlay" onclick="closeDemoModal()"></div>
+        <div class="demo-modal-content">
+            <button class="demo-modal-close" onclick="closeDemoModal()" aria-label="Close demo notice">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="demo-modal-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="#EEF4FF"/>
+                    <path d="M24 16V24M24 28H24.01" stroke="#1E60FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <h3 class="demo-modal-title">Portfolio Concept Only</h3>
+            <p class="demo-modal-message">This page is a portfolio design concept. No request is sent — this is a demonstration of interface and user experience design.</p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Zurück nach oben">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
